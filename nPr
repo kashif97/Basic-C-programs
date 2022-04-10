@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int m, n, res=1, temp=0, flag=0;
+    printf("Enter two positive integers:");
+    scanf("%d %d", &m, &n);
+    temp=m;
+    flag=n;
+    if(m<n){
+        printf("P(%d, %d) is 0", m, n);
+    }
+    else{
+        while(temp>flag){
+            res=res*temp;
+            temp--;
+        }
+    }
+    printf("P(%d, %d) is %d", m, n, res);
+}
